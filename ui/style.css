@@ -226,7 +226,7 @@ main .myWork {
         overflow-y: hidden; }
         main .myWork .allWorks .workWithInfo div img {
           width: 100%;
-          cursor: progress; }
+          cursor: pointer; }
       main .myWork .allWorks .workWithInfo .work:hover {
         overflow-y: scroll; }
       main .myWork .allWorks .workWithInfo .usedTools {
