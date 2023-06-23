@@ -1,0 +1,225 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px; //easy in calculations[em ,rem]
+}
+
+body {
+  background-color: #e2d7c5;
+}
+
+a::selection,//Grouping
+p::selection,
+h1::selection,
+h2::selection {
+  background-color: black;
+}
+
+header {
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../helpers/nada.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .header__element {
+    font-family: $font;
+    color: white;
+    width: 100%;
+
+    &--fixed {
+      //white part in the top of the page
+      z-index: 1;
+      height: 10vh;
+      width: 100%;
+      background-color: whitesmoke;
+      position: fixed; //try sticky
+      //   border: 1px solid red;
+      display: flex;
+      align-items: center;
+      .header__fixedPart {
+        //h1,nav
+        position: relative;
+
+        &--title {
+          //h1 : block element
+          left: 3vw;
+          font-family: $font;
+          font-size: 2vw;
+          font-weight: bold;
+          color: black;
+          // border: 1px solid rgb(249, 109, 9);
+        }
+
+        &--nav {
+          left: 50vw;
+          width: 35vw;
+          //   border: 2px solid green;
+
+          .dropDown {
+            display: none;
+          }
+
+          @media only screen and(max-width:800px) {
+            .dropDown {
+              display: inline;
+              width: 15vw;
+            }
+          }
+
+          .navContainer {
+            //ul
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-left: 0;
+            // border: 1px solid rgb(254, 22, 239);
+
+            li {
+              position: relative;
+              display: inline;
+              padding-top: 0.3vw;
+              // border: 1px solid rgb(245, 249, 9);
+              width: fit-content;
+
+              a {
+                font-size: 1.8vw;
+                color: black;
+                text-decoration: none;
+                font-weight: 200;
+                width: inherit;
+                // border: 1px solid rgb(51, 126, 153);
+              }
+            }
+            li::before {
+              content: "";
+              background-color: black;
+              height: 0.2vw;
+              width: 0;
+              position: absolute;
+              top: 2.5vw;
+              transition: 0.5s;
+              border-radius: 1vw;
+            }
+            @media only screen and(max-width:800px) {
+              li::before {
+                top: 4vw;
+              }
+            }
+
+            li:hover::before {
+              position: absolute;
+              width: 100%;
+            }
+            @media only screen and(max-width:800px) {
+              li:hover::before {
+                width: 75%;
+              }
+            }
+            //You can do this by setting the a element's position
+            //to relative and the pseudo-element's position to absolute .
+            //This will make the pseudo-element "inherit" its original element's width,
+            //allowing you to set width: 100%
+
+            @media only screen and(max-width:800px) {
+              li {
+                display: none;
+              }
+            }
+          }
+
+          @media only screen and(max-width:800px) {
+            .navContainer {
+              display: block;
+              width: fit-content;
+              padding-left: 0;
+              // border: 1px solid rgb(226, 68, 68);
+            }
+          }
+        }
+
+        @media only screen and(max-width:800px) {
+          &--nav {
+            left: 65vw;
+            width: 35vw;
+            // border: 2px solid rgb(157, 228, 95);
+            width: fit-content;
+            // height: 80%;
+          }
+          &--nav:hover {
+            .dropDown {
+              margin-top: 150%;
+
+              background-color: black;
+              color: #c8a983;
+            }
+
+            li {
+              //   background-color: palevioletred;
+              display: block;
+              text-align: center;
+              padding: 0.3vw;
+              margin: 0.3vw;
+              width: 90%;
+              a {
+                font-size: 3.3vw;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                width: 100%;
+                // border: 1px solid rgb(51, 126, 153);
+              }
+            }
+            li:hover {
+              background-color: white;
+              a {
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and(max-width:800px) {
+      &--fixed {
+        height: 5.5vw;
+      }
+    }
+
+    &--info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .name {
+        font-size: 3vw;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .job {
+        font-size: 2vw;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// @media only screen and(max-width:800px) {
+//     .dropDown {
+//         display: inline;
+//         // visibility: visible;
+//     }
+// }
