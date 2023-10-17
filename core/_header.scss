@@ -43,7 +43,7 @@ header {
       width: 100%;
       background-color: whitesmoke;
       position: fixed; //try sticky
-      //   border: 1px solid red;
+      // border: 1px solid red;
       display: flex;
       align-items: center;
       .header__fixedPart {
@@ -61,9 +61,9 @@ header {
         }
 
         &--nav {
-          left: 50vw;
-          width: 35vw;
-          //   border: 2px solid green;
+          left: 55vw;
+          width: 30vw;
+          // border: 2px solid green;
 
           .dropDown {
             display: none;
