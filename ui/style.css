@@ -47,7 +47,7 @@ header {
           font-weight: bold;
           color: black; }
         header .header__element--fixed .header__fixedPart--nav {
-          left: 55vw;
+          left: 60vw;
           width: 25vw; }
           header .header__element--fixed .header__fixedPart--nav .dropDown {
             display: none; }

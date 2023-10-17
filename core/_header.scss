@@ -5,22 +5,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 10px; //easy in calculations[em ,rem]
 }
-
 body {
   background-color: #e2d7c5;
 }
-
 a::selection,//Grouping
 p::selection,
 h1::selection,
 h2::selection {
   background-color: black;
 }
-
 header {
   height: 95vh;
   width: 100%;
@@ -30,12 +26,10 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
   .header__element {
     font-family: $font;
     color: white;
     width: 100%;
-
     &--fixed {
       //white part in the top of the page
       z-index: 1;
@@ -49,7 +43,6 @@ header {
       .header__fixedPart {
         //h1,nav
         position: relative;
-
         &--title {
           //h1 : block element
           left: 3vw;
@@ -59,23 +52,19 @@ header {
           color: black;
           // border: 1px solid rgb(249, 109, 9);
         }
-
         &--nav {
-          left: 55vw;
+          left: 60vw;
           width: 25vw;
           // border: 2px solid green;
-
           .dropDown {
             display: none;
           }
-
           @media only screen and(max-width:800px) {
             .dropDown {
               display: inline;
               width: 15vw;
             }
           }
-
           .navContainer {
             //ul
             display: flex;
@@ -84,14 +73,12 @@ header {
             flex-wrap: wrap;
             padding-left: 0;
             // border: 1px solid rgb(254, 22, 239);
-
             li {
               position: relative;
               display: inline;
               padding-top: 0.3vw;
               // border: 1px solid rgb(245, 249, 9);
               width: fit-content;
-
               a {
                 font-size: 1.8vw;
                 color: black;
@@ -116,7 +103,6 @@ header {
                 top: 4vw;
               }
             }
-
             li:hover::before {
               position: absolute;
               width: 100%;
@@ -130,14 +116,12 @@ header {
             //to relative and the pseudo-element's position to absolute .
             //This will make the pseudo-element "inherit" its original element's width,
             //allowing you to set width: 100%
-
             @media only screen and(max-width:800px) {
               li {
                 display: none;
               }
             }
           }
-
           @media only screen and(max-width:800px) {
             .navContainer {
               display: block;
@@ -147,7 +131,6 @@ header {
             }
           }
         }
-
         @media only screen and(max-width:800px) {
           &--nav {
             left: 65vw;
@@ -159,11 +142,9 @@ header {
           &--nav:hover {
             .dropDown {
               margin-top: 150%;
-
               background-color: black;
               color: #c8a983;
             }
-
             li {
               //   background-color: palevioletred;
               display: block;
@@ -190,25 +171,21 @@ header {
         }
       }
     }
-
     @media only screen and(max-width:800px) {
       &--fixed {
         height: 5.5vw;
       }
     }
-
     &--info {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-
       .name {
         font-size: 3vw;
         font-weight: bold;
         text-align: center;
       }
-
       .job {
         font-size: 2vw;
         text-align: center;
